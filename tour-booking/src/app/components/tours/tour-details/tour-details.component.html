@@ -1,0 +1,8 @@
+<div *ngIf="tour" class="tour-details">
+    <h2>{{ tour.name }}</h2>
+    <p>{{ tour.description }}</p>
+    <p>{{ tour.duration }}</p>
+    <p>{{ tour.price | currency }}</p>
+    <button *ngIf="isAdmin()" [routerLink]="['/edit-tour', tour.id]">Edit</button>
+  </div>
+  

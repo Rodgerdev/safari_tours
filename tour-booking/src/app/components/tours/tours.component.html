@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Tours</h1>
+  <div *ngFor="let tour of tours">
+    <h2>{{ tour.name }}</h2>
+    <p>{{ tour.description }}</p>
+    <p>Price: {{ tour.price }}</p>
+    <p>Duration: {{ tour.duration }} days</p>
+    <button (click)="selectTour(tour)">Select Tour</button>
+    <button (click)="deleteTour(tour.id)">Delete</button>
+    <button (click)="updateTour(tour.id, tour)">Update</button>
+  </div>
+  <div>
+    <h3>Add New Tour</h3>
+    <form #tourForm="ngForm" (ngSubmit)="addTour(tourForm.value)">
+      <input type="text" name="name" placeholder="Name" ngModel required>
+      <input type="text" name="description" placeholder="Description" ngModel required>
+      <input type="number" name="price" placeholder="Price" ngModel required>
+      <input type="number" name="duration" placeholder="Duration" ngModel required>
+      <button type="submit">Add Tour</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.tour-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tour-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 30%;
+  }
+  
+  .tour-card h2 {
+    color: #333;
+  }
+  
+  .tour-card p {
+    font-size: 1rem;
+  }
+  

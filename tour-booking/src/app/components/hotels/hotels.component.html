@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Hotels</h1>
+  <div *ngIf="confirmationMessage" class="alert alert-success">
+    <legend class="successMessage">{{ confirmationMessage }}</legend>
+  </div>
+  <div *ngFor="let hotel of hotels">
+    <h2>{{ hotel.name }}</h2>
+    <p>Location: {{ hotel.location }}</p>
+    <p>Price: {{ hotel.price }}</p>
+    <button (click)="confirmBooking(hotel)">Confirm Booking</button>
+    <button (click)="deleteHotel(hotel.id)">Delete</button>
+    <button (click)="updateHotel(hotel.id, hotel)">Update</button>
+  </div>
+  <div>
+    <h3>Add New Hotel</h3>
+    <form #hotelForm="ngForm" (ngSubmit)="addHotel(hotelForm.value)">
+      <input type="text" name="name" placeholder="Name" ngModel required>
+      <input type="text" name="location" placeholder="Location" ngModel required>
+      <input type="number" name="price" placeholder="Price" ngModel required>
+      <button type="submit">Add Hotel</button>
+    </form>
+  </div>
+</div>
