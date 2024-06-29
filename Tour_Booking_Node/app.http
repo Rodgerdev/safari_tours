@@ -1,0 +1,108 @@
+#### Register User
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "Name": "Japheth Rodgers",
+  "Email": "japhethrodgers77@gmail.com",
+  "Password": "Password123!",
+  "isAdmin": 0
+}
+
+#### Login User
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "ndemo.rodgers20@students.dkut.ac.ke",
+  "password": "Password123!"
+}
+
+### Get All Users
+GET http://localhost:3000/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYyMTc0OCwiZXhwIjoxNzE4NjI1MzQ4fQ.N-5CQ5miSdX0hIOgscI93AZ0y9oIw0e5lCHKW19JU38
+
+### Add Tour
+POST http://localhost:3000/tours
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYxODE4NiwiZXhwIjoxNzE4NjIxNzg2fQ.xUNJzlh07KeBvLXguj2uwF21ob8hyjALE1ijuiR4_r8
+Content-Type: application/json
+
+{
+  "name": "Dubai Tour",
+  "description": "Tour the UAE",
+  "price": 500,
+  "duration": 5
+}
+
+### Get All Tours
+GET http://localhost:3000/tours
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYyMTc0OCwiZXhwIjoxNzE4NjI1MzQ4fQ.N-5CQ5miSdX0hIOgscI93AZ0y9oIw0e5lCHKW19JU38
+
+
+### Add Hotel
+POST http://localhost:3000/hotels
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYyMTc0OCwiZXhwIjoxNzE4NjI1MzQ4fQ.N-5CQ5miSdX0hIOgscI93AZ0y9oIw0e5lCHKW19JU38
+Content-Type: application/json
+
+{
+  "name": "Dubai Exclusive",
+  "location": "Dubai",
+  "price": 1800
+}
+
+
+### Get All Hotels
+GET http://localhost:3000/hotels
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYyMTc0OCwiZXhwIjoxNzE4NjI1MzQ4fQ.N-5CQ5miSdX0hIOgscI93AZ0y9oIw0e5lCHKW19JU38
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYwOTc4NSwiZXhwIjoxNzE4NjEzMzg1fQ.MXtG4BB-KwfANmmdFYwrqxor89EP6JnNWNqUbU7cqIk
+
+### Update Hotel
+PUT http://localhost:3000/hotels/b72050aa-08f9-4fc7-b779-b044d90c3a4c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYwOTc4NSwiZXhwIjoxNzE4NjEzMzg1fQ.MXtG4BB-KwfANmmdFYwrqxor89EP6JnNWNqUbU7cqIk
+Content-Type: application/json
+
+{
+  "name": "Mombasa Beach Updated",
+  "location": "Mombasa Updated",
+  "price": 129.99
+}
+
+
+### Delete Hotel
+DELETE http://localhost:3000/hotels/3c8cd1b3-5563-42b9-a507-73391dcf3d23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYyMTc0OCwiZXhwIjoxNzE4NjI1MzQ4fQ.N-5CQ5miSdX0hIOgscI93AZ0y9oIw0e5lCHKW19JU38
+
+
+
+### Add Booking
+POST http://localhost:3000/bookings
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYyMDc5NywiZXhwIjoxNzE4NjI0Mzk3fQ.Xw3HBmgi3SRCzt6SYgdv759MsyHB78MTMM3ySOXMJUw
+Content-Type: application/json
+
+{
+  "userId": "ce67b107-53c8-44ec-8d13-5fabb6c94497",
+  "tourId": "8afda6a5-2751-4826-b7a0-878fb65e4b3f",
+  "hotelId": "7c0a077e-40e2-4996-9a59-dbe2f7584e17"
+}
+
+### Get All Bookings
+GET http://localhost:3000/bookings
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYxODE4NiwiZXhwIjoxNzE4NjIxNzg2fQ.xUNJzlh07KeBvLXguj2uwF21ob8hyjALE1ijuiR4_r8
+
+### Get Booking By ID
+GET http://localhost:3000/bookings/acf6eec5-e721-43a8-99c1-7e2bbd1d3139
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYxODE4NiwiZXhwIjoxNzE4NjIxNzg2fQ.xUNJzlh07KeBvLXguj2uwF21ob8hyjALE1ijuiR4_r8
+
+### Update Booking
+PUT http://localhost:3000/bookings/acf6eec5-e721-43a8-99c1-7e2bbd1d3139
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYxODE4NiwiZXhwIjoxNzE4NjIxNzg2fQ.xUNJzlh07KeBvLXguj2uwF21ob8hyjALE1ijuiR4_r8
+Content-Type: application/json
+
+{
+  "status": "confirmed"
+}
+
+### Cancel Booking
+DELETE http://localhost:3000/bookings/acf6eec5-e721-43a8-99c1-7e2bbd1d3139
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJjZTY3YjEwNy01M2M4LTQ0ZWMtOGQxMy01ZmFiYjZjOTQ0OTciLCJOYW1lIjoiUm9kZ2VycyBOZGVtbyIsImlzQWRtaW4iOjEsImlhdCI6MTcxODYxODE4NiwiZXhwIjoxNzE4NjIxNzg2fQ.xUNJzlh07KeBvLXguj2uwF21ob8hyjALE1ijuiR4_r8
